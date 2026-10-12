@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Avance 0. Propuesta de proyecto y firma de convenios - Equipo 48</title>
+<link rel="stylesheet" href="assets/print.css">
+</head>
+<body>
+
+<!-- ===================== PORTADA ===================== -->
+<section class="portada">
+
+  <div class="portada-encabezado">
+    <p class="institucion">Tecnológico de Monterrey</p>
+    <p class="programa">Maestría en Inteligencia Artificial Aplicada</p>
+    <p class="curso">TC5035.10 — Proyecto Integrador (Grupo 10) · Trimestre septiembre – diciembre 2026</p>
+    <hr class="regla">
+  </div>
+
+  <div>
+    <p class="etiqueta">Avance 0 · Propuesta de proyecto y firma de convenios</p>
+    <h1 class="titulo">Planograma: IA para detección de productos y ubicación</h1>
+    <p class="subtitulo">Detección de faltantes y de productos fuera de lugar en anaquel a partir de imágenes, para generar alertas de resurtido</p>
+  </div>
+
+  <div>
+    <p class="equipo">Equipo 48</p>
+    <ul class="integrantes">
+      <li><span>Jesús Soto Medrano</span><span class="matricula">A01794746</span></li>
+      <li><span>Germán Eduardo Rodríguez Vázquez</span><span class="matricula">A01796325</span></li>
+      <li><span>Oscar Alberto Ramírez Anaya</span><span class="matricula">A01795438</span></li>
+    </ul>
+  </div>
+
+  <div class="portada-pie">
+    <p><strong>Profesora:</strong> Dra. Grettel Barceló Alonso</p>
+    <p><strong>Asesor:</strong> Dr. Raúl Valente Ramírez</p>
+    <p><strong>Sponsor:</strong> Dr. Juan Arturo Nolazco Flores, Director del Hub de Ciencia de Datos, Tecnológico de Monterrey</p>
+    <p><strong>Organización:</strong> Bnext, Monterrey, Nuevo León</p>
+    <p style="margin-top:4mm">27 de septiembre de 2026</p>
+  </div>
+
+</section>
+
+<!-- ===================== INDICE ===================== -->
+<h2>Índice</h2>
+<ul class="indice">
+  <li><span>1. Antecedentes</span><span class="relleno"></span><span class="pag" data-ref="s1">3</span></li>
+  <li class="sub"><span>1.1 La organización: Bnext</span><span class="relleno"></span><span class="pag" data-ref="s11">3</span></li>
+  <li class="sub"><span>1.2 El proceso de negocio impactado</span><span class="relleno"></span><span class="pag" data-ref="s12">3</span></li>
+  <li class="sub"><span>1.3 Metodología: CRISP-ML(Q)</span><span class="relleno"></span><span class="pag" data-ref="s13">4</span></li>
+  <li><span>2. Entendimiento del negocio</span><span class="relleno"></span><span class="pag" data-ref="s2">5</span></li>
+  <li class="sub"><span>2.1 Formulación del problema</span><span class="relleno"></span><span class="pag" data-ref="s21">5</span></li>
+  <li class="sub"><span>2.2 Contexto</span><span class="relleno"></span><span class="pag" data-ref="s22">5</span></li>
+  <li class="sub"><span>2.3 Objetivos</span><span class="relleno"></span><span class="pag" data-ref="s23">6</span></li>
+  <li class="sub"><span>2.4 Criterios de éxito y metas propuestas</span><span class="relleno"></span><span class="pag" data-ref="s24">6</span></li>
+  <li class="sub"><span>2.5 Preguntas clave</span><span class="relleno"></span><span class="pag" data-ref="s25">7</span></li>
+  <li class="sub"><span>2.6 Involucrados</span><span class="relleno"></span><span class="pag" data-ref="s26">8</span></li>
+  <li><span>3. Entendimiento de los datos</span><span class="relleno"></span><span class="pag" data-ref="s3">8</span></li>
+  <li class="sub"><span>3.1 Descripción y contexto de los datos</span><span class="relleno"></span><span class="pag" data-ref="s31">8</span></li>
+  <li class="sub"><span>3.2 Técnica de aprendizaje automático</span><span class="relleno"></span><span class="pag" data-ref="s32">10</span></li>
+  <li class="sub"><span>3.3 Identificación de las variables</span><span class="relleno"></span><span class="pag" data-ref="s33">10</span></li>
+  <li><span>4. Convenios</span><span class="relleno"></span><span class="pag" data-ref="s4">11</span></li>
+  <li><span>Bibliografía</span><span class="relleno"></span><span class="pag" data-ref="s5">12</span></li>
+</ul>
+
+<h3 class="lista-indice-titulo">Índice de tablas</h3>
+<ul class="indice">
+  <li class="sub"><span>Tabla 1. Fases de CRISP-ML(Q) y su aplicación en el proyecto</span><span class="relleno"></span><span class="pag" data-ref="t1">4</span></li>
+  <li class="sub"><span>Tabla 2. Traducción de objetivos comerciales a objetivos del proyecto</span><span class="relleno"></span><span class="pag" data-ref="t2">6</span></li>
+  <li class="sub"><span>Tabla 3. Criterios de éxito y metas propuestas</span><span class="relleno"></span><span class="pag" data-ref="t3">7</span></li>
+  <li class="sub"><span>Tabla 4. Involucrados en el proyecto</span><span class="relleno"></span><span class="pag" data-ref="t4">8</span></li>
+  <li class="sub"><span>Tabla 5. Estado de conocimiento del conjunto de datos</span><span class="relleno"></span><span class="pag" data-ref="t5">9</span></li>
+  <li class="sub"><span>Tabla 6. Variables de entrada y de salida</span><span class="relleno"></span><span class="pag" data-ref="t6">10</span></li>
+</ul>
+
+<h3 class="lista-indice-titulo">Índice de figuras</h3>
+<ul class="indice">
+  <li class="sub"><span>Figura 1. Fases de CRISP-ML(Q)</span><span class="relleno"></span><span class="pag" data-ref="f1">4</span></li>
+  <li class="sub"><span>Figura 2. Flujo propuesto de la solución</span><span class="relleno"></span><span class="pag" data-ref="f2">11</span></li>
+</ul>
+
+<!-- ===================== 1. ANTECEDENTES ===================== -->
+<h2 class="salto" id="s1">1. Antecedentes</h2>
+
+<h3 id="s11">1.1 La organización: Bnext</h3>
+<p>Bnext es una empresa mexicana de tecnología fundada en 2001 en la Incubadora de Empresas del Tecnológico de Monterrey, con sede en Monterrey, Nuevo León (Omnitech, s. f.). Su actividad se concentra en soluciones tecnológicas para el sector detallista: un sistema de planeación de recursos empresariales (ERP) orientado a comercio y servicios, que integra ventas, relación con clientes, compras, inventarios, contabilidad y administración; sistemas de punto de venta (POS); una plataforma de gestión de calidad y procesos (QMS); servicios centralizados de mesa de ayuda y soluciones financieras para puntos de venta, como recargas de tiempo aire, tarjetas de prepago y pago de servicios (Bnext, s. f.; Omnitech, s. f.). La empresa cuenta con certificaciones ISO 9001 y MOPROSOFT, y con más de 150 colaboradores en la Ciudad de México, Guadalajara, Mazatlán y Monterrey (Omnitech, s. f.). Su misión declarada es «formar la comunidad de Retail más feliz y rentable para sus integrantes» (Omnitech, s. f.).</p>
+<p>Por la naturaleza de su actividad, que consiste en el diseño, desarrollo y operación de sistemas de cómputo para terceros, Bnext se ubica en el sector 54, <em>Servicios profesionales, científicos y técnicos</em>, del Sistema de Clasificación Industrial de América del Norte (INEGI, 2023). Sus clientes, en cambio, son empresas de comercio al por menor. Esta distinción es relevante para el proyecto: el beneficio operativo se materializa en el piso de venta de los detallistas, mientras que Bnext es quien incorpora la capacidad analítica a su oferta tecnológica.</p>
+<p>El proyecto se desarrolla en vinculación con el Hub de Ciencia de Datos del Tecnológico de Monterrey, dirigido por el Dr. Juan Arturo Nolazco Flores. El Hub es un espacio de investigación, desarrollo, operación y capacitación en ciencia de datos que busca apoyar la toma de decisiones en el sector productivo, la academia y el gobierno, en alianza con socios estratégicos de la industria (Badillo, 2021). A través de este vínculo, Bnext pone a disposición del equipo un conjunto de imágenes de anaquel y el acompañamiento técnico de su área de ciencia de datos, bajo un convenio de confidencialidad.</p>
+
+<h3 id="s12">1.2 El proceso de negocio impactado</h3>
+<p>El proceso que el proyecto impacta es la <strong>ejecución en piso de venta</strong>, en particular dos actividades que ocurren sobre cada anaquel de una tienda:</p>
+<ul>
+  <li><strong>Resurtido de anaquel.</strong> Consiste en detectar que un producto se agotó o está por agotarse en la exhibición y reponerlo desde la bodega de la tienda. Si el faltante no se detecta a tiempo, se produce un quiebre de stock en anaquel: el producto puede existir en el inventario de la tienda, pero el cliente no lo encuentra.</li>
+  <li><strong>Cumplimiento del planograma.</strong> El planograma es el diagrama que prescribe qué producto ocupa cada posición del mueble, en qué charola y con cuántos frentes. Verificar su cumplimiento significa confirmar que el acomodo observado coincide con el prescrito.</li>
+</ul>
+<p>Hoy ambas actividades dependen de la revisión visual del personal de tienda o de supervisores que recorren los pasillos y comparan el anaquel contra el planograma. Es un proceso manual, intermitente y difícil de escalar: la frecuencia de revisión está limitada por el personal disponible, la calidad depende de quién revisa y el resultado rara vez queda registrado de forma estructurada. La literatura sobre identificación automática de productos en anaquel coincide en que la verificación manual es costosa y propensa a errores, y en que la visión computacional es la vía para automatizarla (Santra &amp; Mukherjee, 2019).</p>
+
+<h3 id="s13">1.3 Metodología: CRISP-ML(Q)</h3>
+<p>El proyecto sigue la metodología CRISP-ML(Q) (<em>Cross-Industry Standard Process for the development of Machine Learning applications with Quality assurance</em>). Esta metodología extiende el modelo CRISP-DM con una fase explícita de monitoreo y mantenimiento, fusiona el entendimiento del negocio y el de los datos en una sola fase, y agrega en cada fase una metodología de aseguramiento de calidad: se definen los requisitos y las restricciones, se identifican los riesgos que amenazan la calidad del resultado y se eligen medidas para mitigarlos (Studer et al., 2021; Visengeriyeva et al., 2023). La Figura 1 muestra la secuencia de fases y la Tabla 1 describe cómo se aplica cada una en este proyecto.</p>
+
+<figure id="f1">
+<svg viewBox="0 0 640 230" width="600" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b3b8c"/>
+    </marker>
+  </defs>
+  <!-- fila superior -->
+  <rect x="10" y="20" width="180" height="62" rx="6" fill="#0b3b8c"/>
+  <text x="100" y="45" fill="#fff" font-size="12.5" text-anchor="middle" font-weight="600">1. Entendimiento del</text>
+  <text x="100" y="62" fill="#fff" font-size="12.5" text-anchor="middle" font-weight="600">negocio y de los datos</text>
+  <rect x="230" y="20" width="180" height="62" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="320" y="47" fill="#0b3b8c" font-size="12.5" text-anchor="middle" font-weight="600">2. Ingeniería</text>
+  <text x="320" y="64" fill="#0b3b8c" font-size="12.5" text-anchor="middle" font-weight="600">de datos</text>
+  <rect x="450" y="20" width="180" height="62" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="540" y="47" fill="#0b3b8c" font-size="12.5" text-anchor="middle" font-weight="600">3. Ingeniería</text>
+  <text x="540" y="64" fill="#0b3b8c" font-size="12.5" text-anchor="middle" font-weight="600">del modelo</text>
+  <!-- fila inferior -->
+  <rect x="450" y="140" width="180" height="62" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="540" y="167" fill="#0b3b8c" font-size="12.5" text-anchor="middle" font-weight="600">4. Evaluación</text>
+  <text x="540" y="184" fill="#0b3b8c" font-size="12.5" text-anchor="middle" font-weight="600">del modelo</text>
+  <rect x="230" y="140" width="180" height="62" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="320" y="176" fill="#0b3b8c" font-size="12.5" text-anchor="middle" font-weight="600">5. Despliegue</text>
+  <rect x="10" y="140" width="180" height="62" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="100" y="167" fill="#0b3b8c" font-size="12.5" text-anchor="middle" font-weight="600">6. Monitoreo y</text>
+  <text x="100" y="184" fill="#0b3b8c" font-size="12.5" text-anchor="middle" font-weight="600">mantenimiento</text>
+  <!-- flechas -->
+  <line x1="190" y1="51" x2="228" y2="51" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl)"/>
+  <line x1="410" y1="51" x2="448" y2="51" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl)"/>
+  <line x1="540" y1="82" x2="540" y2="138" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl)"/>
+  <line x1="450" y1="171" x2="412" y2="171" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl)"/>
+  <line x1="230" y1="171" x2="192" y2="171" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl)"/>
+  <path d="M100,140 L100,84" stroke="#0b3b8c" stroke-width="1.6" stroke-dasharray="5 4" fill="none" marker-end="url(#fl)"/>
+  <text x="108" y="116" fill="#5a5a5a" font-size="10.5">retroalimentación</text>
+  <text x="320" y="118" fill="#5a5a5a" font-size="10.5" text-anchor="middle">Aseguramiento de calidad en cada fase:</text>
+  <text x="320" y="132" fill="#5a5a5a" font-size="10.5" text-anchor="middle">requisitos, riesgos y medidas de mitigación</text>
+</svg>
+<figcaption><b>Figura 1.</b> Fases de CRISP-ML(Q). La fase resaltada es la que cubre este avance. La flecha punteada indica que los hallazgos de monitoreo pueden devolver el proyecto a la primera fase. Elaboración propia con base en Visengeriyeva et al. (2023) y Studer et al. (2021).</figcaption>
+</figure>
+
+<table class="fase" id="t1">
+  <caption><b>Tabla 1.</b> Fases de CRISP-ML(Q) y su aplicación en el proyecto</caption>
+  <thead><tr><th>Fase</th><th>Aplicación en el proyecto</th></tr></thead>
+  <tbody>
+    <tr><td>1. Entendimiento del negocio y de los datos</td><td>Definir el problema, los objetivos comerciales y su traducción a objetivos de aprendizaje automático, los criterios de éxito, los involucrados y una primera descripción del conjunto de imágenes. Evaluar la factibilidad y asegurar el acceso a los datos mediante el convenio. Es la fase que cubre este documento.</td></tr>
+    <tr><td>2. Ingeniería de datos</td><td>Análisis exploratorio del conjunto de imágenes, selección de la muestra de trabajo, definición de la taxonomía de clases (productos y espacios vacíos), estrategia y protocolo de etiquetado, limpieza, partición en entrenamiento, validación y prueba, y aumento de datos.</td></tr>
+    <tr><td>3. Ingeniería del modelo</td><td>Entrenamiento de un modelo base con transferencia de aprendizaje, comparación de arquitecturas de detección de objetos y ajuste de hiperparámetros, con registro de cada experimento.</td></tr>
+    <tr><td>4. Evaluación del modelo</td><td>Medición del desempeño sobre un conjunto de prueba independiente con las métricas de la Tabla 3, análisis de errores por tipo de producto y condición de captura, y validación de los resultados con el líder técnico de Bnext.</td></tr>
+    <tr><td>5. Despliegue</td><td>Prototipo de inferencia que recibe una imagen de anaquel y entrega el estado de cada posición y las alertas de resurtido.</td></tr>
+    <tr><td>6. Monitoreo y mantenimiento</td><td>Propuesta de indicadores para detectar degradación del modelo por cambios de empaque, de catálogo o de condiciones de la tienda, y criterios para reentrenar.</td></tr>
+  </tbody>
+</table>
+
+<!-- ===================== 2. ENTENDIMIENTO DEL NEGOCIO ===================== -->
+<h2 id="s2">2. Entendimiento del negocio</h2>
+
+<h3 id="s21">2.1 Formulación del problema</h3>
+<p>Los detallistas que atienden Bnext no cuentan con un mecanismo automático y continuo para saber, en un momento dado, qué posiciones de un anaquel están vacías y deben resurtirse, ni qué productos ocupan una posición distinta de la prescrita por el planograma. La verificación depende de recorridos manuales, por lo que los faltantes se detectan tarde y de forma incompleta.</p>
+<p>El problema que el proyecto intenta resolver se formula así: <strong>a partir de una imagen de un anaquel, detectar y localizar los productos y los espacios vacíos, y determinar para cada posición si su estado es correcto, faltante o mal ubicado, de modo que se genere una alerta de resurtido cuando corresponda.</strong></p>
+
+<h3 id="s22">2.2 Contexto</h3>
+<p>Resolver este problema es importante porque el faltante en anaquel tiene un costo directo en ventas y en lealtad. En un estudio de alcance mundial sobre quiebres de stock en el comercio de productos de consumo, Gruen et al. (2002) estimaron una tasa promedio de faltantes de 8.3&nbsp;%, encontraron que entre 70&nbsp;% y 75&nbsp;% de las causas se originan dentro de la propia tienda, en sus prácticas de pedido, pronóstico y reposición; cerca de una cuarta parte de los faltantes ocurre cuando el producto está en la tienda, pero no en el anaquel. Además, reportaron que ante un faltante 31&nbsp;% de los consumidores compra el producto en otra tienda y 9&nbsp;% no lo compra. Es decir, buena parte del problema es operativo y ocurre en el último tramo, entre la bodega de la tienda y el anaquel, justo donde una detección oportuna tiene efecto.</p>
+<p>Automatizar la verificación convierte una revisión esporádica en una medición frecuente y registrable. Para los detallistas, significa reponer antes, reducir ventas perdidas y mantener la consistencia de la exhibición entre sucursales. Para Bnext, significa incorporar a su oferta tecnológica para retail una capacidad analítica basada en imágenes que complementa la información transaccional de sus sistemas de punto de venta e inventarios.</p>
+<p>La tarea es técnicamente exigente. Los anaqueles son escenas densas, con decenas o cientos de objetos por imagen, muy parecidos entre sí, con oclusiones y variaciones de iluminación y de ángulo (Goldman et al., 2019). Por eso el proyecto se plantea como un problema de visión computacional con aprendizaje profundo, y no como una regla fija de procesamiento de imagen.</p>
+
+<h3 id="s23">2.3 Objetivos</h3>
+<p><strong>Objetivo general.</strong> Desarrollar y evaluar un prototipo basado en visión computacional y aprendizaje profundo que, a partir de imágenes de anaquel, detecte productos y espacios vacíos, determine el estado de cada posición respecto al planograma y genere alertas de resurtido.</p>
+<p><strong>Objetivos específicos.</strong></p>
+<ol>
+  <li>Caracterizar el conjunto de imágenes provisto por Bnext y definir una muestra de trabajo representativa.</li>
+  <li>Definir la taxonomía de clases y una estrategia de etiquetado viable para el volumen disponible.</li>
+  <li>Entrenar y comparar modelos de detección de objetos para localizar productos y espacios vacíos.</li>
+  <li>Conciliar las detecciones con la distribución de referencia y clasificar cada posición como correcta, faltante o mal ubicada.</li>
+  <li>Evaluar el prototipo con métricas técnicas y de negocio, y documentar sus limitaciones y condiciones de uso.</li>
+</ol>
+<p>La Tabla 2 muestra cómo cada objetivo comercial se traduce en un objetivo del proyecto medible, siguiendo la recomendación de CRISP-ML(Q) de expresar el objetivo de negocio en términos de una tarea de aprendizaje automático (Visengeriyeva et al., 2023).</p>
+
+<table class="obj" id="t2">
+  <caption><b>Tabla 2.</b> Traducción de objetivos comerciales a objetivos del proyecto</caption>
+  <thead><tr><th>Objetivo comercial</th><th>Objetivo del proyecto</th><th>Forma de medición</th></tr></thead>
+  <tbody>
+    <tr><td>Reducir el tiempo durante el cual un producto permanece agotado en anaquel.</td><td>Detectar espacios vacíos en la imagen del anaquel y emitir una alerta de resurtido por posición.</td><td>Sensibilidad (<em>recall</em>) y precisión en la detección de posiciones faltantes.</td></tr>
+    <tr><td>Asegurar que la exhibición respete el planograma.</td><td>Identificar cada producto y compararlo contra la posición prescrita.</td><td>Exactitud del estado asignado por posición (correcto, faltante, mal ubicado).</td></tr>
+    <tr><td>Disminuir el esfuerzo de la verificación manual.</td><td>Procesar una imagen de anaquel y entregar el diagnóstico sin intervención humana.</td><td>Tiempo de procesamiento por imagen y proporción de posiciones que requieren revisión manual.</td></tr>
+    <tr><td>Contar con un modelo confiable en distintas tiendas.</td><td>Evaluar el detector sobre imágenes no vistas en el entrenamiento.</td><td>Precisión promedio de detección (mAP@0.5) en el conjunto de prueba.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="s24">2.4 Criterios de éxito y metas propuestas</h3>
+<p>CRISP-ML(Q) recomienda definir criterios de éxito en tres niveles: de negocio, de aprendizaje automático y económico (Studer et al., 2021). La Tabla 3 los propone para este proyecto.</p>
+
+<div class="nota">
+  <p class="titulo-nota">Supuesto</p>
+  <p>Las metas numéricas de la Tabla 3 son una propuesta del equipo. Se fijan antes de haber caracterizado el conjunto de datos, porque el convenio de confidencialidad se liberó recientemente y el análisis exploratorio apenas comienza. Toman como referencia el desempeño reportado en la literatura sobre detección en anaqueles (Goldman et al., 2019) y se validarán con el sponsor y con el líder técnico de Bnext al concluir el análisis exploratorio del Avance 1. Si los datos muestran una dificultad distinta de la supuesta, las metas se ajustarán y el cambio quedará documentado.</p>
+</div>
+
+<table class="meta" id="t3">
+  <caption><b>Tabla 3.</b> Criterios de éxito y metas propuestas</caption>
+  <thead><tr><th>Nivel</th><th>Criterio</th><th>Meta propuesta</th></tr></thead>
+  <tbody>
+    <tr><td>Aprendizaje automático</td><td>Precisión promedio de detección de productos y espacios vacíos, mAP con umbral de intersección sobre unión de 0.5, en el conjunto de prueba.</td><td>mAP@0.5 ≥ 0.80</td></tr>
+    <tr><td>Aprendizaje automático</td><td>Sensibilidad en la detección de posiciones faltantes. Se prioriza sobre la precisión porque un faltante no detectado es una venta perdida.</td><td><em>Recall</em> ≥ 0.90</td></tr>
+    <tr><td>Aprendizaje automático</td><td>Precisión de las alertas de resurtido, para evitar que el personal atienda alertas falsas.</td><td>Precisión ≥ 0.85</td></tr>
+    <tr><td>Negocio</td><td>Exactitud del estado asignado a cada posición del anaquel (correcto, faltante, mal ubicado).</td><td>Exactitud ≥ 0.85</td></tr>
+    <tr><td>Negocio</td><td>Tiempo de diagnóstico de una imagen de anaquel.</td><td>Entre 2 y 10 s por imagen con GPU</td></tr>
+    <tr><td>Económico</td><td>Relación entre el costo de operar la solución y el costo de la verificación manual y de las ventas perdidas por faltante.</td><td>Por caracterizar con Bnext</td></tr>
+  </tbody>
+</table>
+
+<h3 id="s25">2.5 Preguntas clave</h3>
+<p>Siguiendo la recomendación de formular preguntas que delimiten el problema y guíen el trabajo (Hernández-Sampieri &amp; Mendoza, 2023), el proyecto debe responder las siguientes:</p>
+<ol>
+  <li>¿Con qué desempeño es posible detectar productos y espacios vacíos en las imágenes reales de anaquel provistas por Bnext?</li>
+  <li>¿Qué nivel de identificación es alcanzable con el etiquetado disponible: producto individual (SKU), marca o categoría?</li>
+  <li>¿Existe una representación del planograma asociada a las imágenes o debe construirse, y cómo se asignan las detecciones a posiciones del anaquel?</li>
+  <li>¿Qué estrategia de etiquetado permite aprovechar un volumen cercano a 100 mil imágenes con un esfuerzo manual acotado?</li>
+  <li>¿Qué condiciones de captura, como iluminación, ángulo, distancia y oclusión, degradan el desempeño, y qué tan bien generaliza el modelo a tiendas o anaqueles no vistos?</li>
+  <li>¿Qué balance entre alertas falsas y faltantes no detectados es aceptable para la operación de tienda?</li>
+  <li>¿Qué costo de cómputo y qué tiempo de respuesta son compatibles con el uso esperado de la solución?</li>
+</ol>
+
+<h3 id="s26">2.6 Involucrados</h3>
+<p>La Tabla 4 identifica a las personas que participan en el proyecto, su rol, la fase de CRISP-ML(Q) en la que intervienen y el nivel y tipo de su participación.</p>
+
+<table class="inv" id="t4">
+  <caption><b>Tabla 4.</b> Involucrados en el proyecto</caption>
+  <thead><tr><th>Involucrado</th><th>Rol</th><th>Fase de participación</th><th>Nivel y tipo de participación</th></tr></thead>
+  <tbody>
+    <tr><td>Dr. Juan Arturo Nolazco Flores<br><span class="fuente">Hub de Ciencia de Datos, Tecnológico de Monterrey</span></td><td>Sponsor</td><td>Todas, con énfasis en la fase 1 y en la evaluación</td><td>Alto. Decisor: gestiona la vinculación con Bnext, valida el alcance y los criterios de éxito y aprueba los resultados.</td></tr>
+    <tr><td>Daniel Zapata<br><span class="fuente">Bnext</span></td><td>Líder técnico y de ciencia de datos</td><td>Entendimiento de los datos, ingeniería de datos y evaluación</td><td>Alto. Proveedor de datos y validador: dio el acceso al servidor y a los conjuntos de datos, resuelve dudas del dominio y valida la pertinencia técnica de los resultados.</td></tr>
+    <tr><td>Dr. Raúl Valente Ramírez<br><span class="fuente">Tecnológico de Monterrey</span></td><td>Asesor</td><td>Todas</td><td>Medio. Consultivo: orienta las decisiones metodológicas y técnicas y revisa los avances.</td></tr>
+    <tr><td>Dra. Grettel Barceló Alonso<br><span class="fuente">Tecnológico de Monterrey</span></td><td>Profesora</td><td>Todas, en cada entrega</td><td>Medio. Evaluadora: da seguimiento académico y evalúa los entregables.</td></tr>
+    <tr><td>Jesús Soto Medrano<br>Germán Eduardo Rodríguez Vázquez<br>Oscar Alberto Ramírez Anaya</td><td>Equipo de desarrollo</td><td>Todas</td><td>Alto. Ejecutores: realizan el análisis, el etiquetado, el modelado, la evaluación y la documentación, con responsabilidad compartida.</td></tr>
+  </tbody>
+</table>
+
+<!-- ===================== 3. ENTENDIMIENTO DE LOS DATOS ===================== -->
+<h2 id="s3">3. Entendimiento de los datos</h2>
+
+<h3 id="s31">3.1 Descripción y contexto de los datos</h3>
+<p>Los datos son proporcionados por Bnext y consisten en un conjunto de aproximadamente <strong>100 mil imágenes de anaqueles</strong> de punto de venta, destinadas al análisis del planograma y a la detección de necesidades de resurtido. El material se encuentra en un servidor de Microsoft Azure administrado por Bnext, al que el equipo accede mediante una red privada virtual (VPN) habilitada por la empresa. Los datos no salen de ese entorno y su uso está sujeto al convenio de confidencialidad descrito en la sección&nbsp;4.</p>
+<p>Cada imagen captura una exhibición real: un mueble con varias charolas y productos de consumo acomodados por frentes. Es un tipo de dato no estructurado: la información relevante, es decir, qué producto hay, dónde está y dónde falta, está codificada en los píxeles y debe extraerse con visión computacional.</p>
+<p>A la fecha de esta entrega, el equipo se encuentra en la etapa de exploración inicial: reconocimiento de la estructura del repositorio, análisis exploratorio y evaluación de estrategias de etiquetado. La Tabla 5 separa lo que ya se conoce de lo que se caracterizará en el Avance 1. Se presenta así para no consignar información no verificada.</p>
+
+<table id="t5">
+  <caption><b>Tabla 5.</b> Estado de conocimiento del conjunto de datos</caption>
+  <thead><tr><th style="width:52mm">Aspecto</th><th>Estado a la fecha</th></tr></thead>
+  <tbody>
+    <tr><td>Proveedor y propiedad</td><td>Bnext, bajo convenio de confidencialidad.</td></tr>
+    <tr><td>Tipo de dato</td><td>Imágenes de anaquel en punto de venta.</td></tr>
+    <tr><td>Volumen</td><td>Aproximadamente 100 mil imágenes.</td></tr>
+    <tr><td>Ubicación y acceso</td><td>Servidor de Microsoft Azure, con acceso por VPN provista por Bnext.</td></tr>
+    <tr><td>Propósito del conjunto</td><td>Análisis del planograma y detección de necesidades de resurtido.</td></tr>
+    <tr><td>Formato, resolución y calidad</td><td class="pendiente">Por caracterizar en el Avance 1.</td></tr>
+    <tr><td>Número de tiendas, anaqueles y categorías de producto</td><td class="pendiente">Por caracterizar en el Avance 1.</td></tr>
+    <tr><td>Existencia de anotaciones (cajas delimitadoras o etiquetas)</td><td class="pendiente">Por caracterizar en el Avance 1. En paralelo se evalúan estrategias de etiquetado.</td></tr>
+    <tr><td>Planogramas de referencia asociados</td><td class="pendiente">Por confirmar con el líder técnico de Bnext.</td></tr>
+    <tr><td>Metadatos (tienda, fecha, pasillo, dispositivo de captura)</td><td class="pendiente">Por caracterizar en el Avance 1.</td></tr>
+  </tbody>
+</table>
+
+<p>El análisis exploratorio del Avance 1 cubrirá al menos la distribución de resoluciones y formatos, la calidad de imagen (desenfoque, iluminación, ángulo), la duplicidad de capturas de un mismo anaquel, la densidad de productos por imagen y la proporción de espacios vacíos. Esta última determina qué tan desbalanceadas estarán las clases que interesan para el resurtido.</p>
+
+<h3 id="s32">3.2 Técnica de aprendizaje automático</h3>
+<p>La técnica seleccionada es <strong>aprendizaje profundo supervisado para detección de objetos</strong>, apoyado en <strong>transferencia de aprendizaje</strong>. La detección de objetos combina, para cada instancia en la imagen, una clasificación (qué es) y una regresión de coordenadas (dónde está). La selección se justifica por tres razones:</p>
+<ul>
+  <li><strong>El problema exige localizar, no solo reconocer.</strong> Para decidir si una posición está vacía o si un producto está fuera de lugar, se necesita la ubicación de cada objeto dentro del mueble. Un clasificador que asigna una sola etiqueta a toda la imagen no entrega esa información, mientras que un detector produce una caja delimitadora con su clase y su confianza por cada instancia.</li>
+  <li><strong>Las escenas son densas y los objetos, parecidos.</strong> Las redes convolucionales profundas entrenadas para detección son el enfoque que mejor desempeño ha mostrado en anaqueles con muchos objetos por imagen, oclusiones y productos visualmente similares (Goldman et al., 2019; Santra &amp; Mukherjee, 2019). Los detectores de una etapa, como la familia YOLO (Redmon et al., 2016), y los de dos etapas, como Faster R-CNN (Ren et al., 2015), serán las arquitecturas candidatas a comparar.</li>
+  <li><strong>Los resultados deben poder auditarse contra una referencia.</strong> El aprendizaje supervisado permite medir el desempeño contra etiquetas verificadas, que es lo que requieren los criterios de éxito de la Tabla 3. Los métodos no supervisados, como el agrupamiento, pueden servir de apoyo en el análisis exploratorio o en la preanotación, pero no asignan por sí solos una identidad verificable a cada producto.</li>
+</ul>
+<p>La transferencia de aprendizaje parte de modelos preentrenados en conjuntos de datos públicos de gran escala y los ajusta al dominio de Bnext. Esto reduce la cantidad de imágenes que deben etiquetarse manualmente. Como el volumen disponible es grande y su estado de anotación aún no se confirma, se explorarán estrategias para reducir el esfuerzo de etiquetado: selección de una muestra representativa, preanotación con un modelo preentrenado y corrección humana, y aprendizaje semisupervisado sobre las imágenes no etiquetadas.</p>
+
+<h3 id="s33">3.3 Identificación de las variables</h3>
+<p>La Tabla 6 resume las entradas y salidas del sistema. Se distingue la salida del modelo de detección de la salida de negocio, que se obtiene al conciliar las detecciones con la distribución de referencia (Figura 2).</p>
+
+<table class="var" id="t6">
+  <caption><b>Tabla 6.</b> Variables de entrada y de salida</caption>
+  <thead><tr><th>Tipo</th><th>Variable</th><th>Descripción</th></tr></thead>
+  <tbody>
+    <tr><td>Entrada</td><td>Imagen del anaquel</td><td>Matriz de píxeles RGB de la exhibición. Es la entrada del modelo de detección.</td></tr>
+    <tr><td>Entrada auxiliar</td><td>Distribución de referencia</td><td>Planograma o distribución esperada del anaquel: estructura de charolas y posiciones y producto asignado a cada una. Su disponibilidad está por confirmar; si no existe, se construirá una representación a partir de las propias imágenes etiquetadas.</td></tr>
+    <tr><td>Entrada auxiliar</td><td>Metadatos de captura</td><td>Tienda, fecha y anaquel, si el conjunto los incluye. Se usarán para particionar los datos sin fuga de información entre entrenamiento y prueba.</td></tr>
+    <tr><td>Salida del modelo</td><td>Detecciones</td><td>Para cada objeto: caja delimitadora (coordenadas), clase (producto, a nivel de SKU o de categoría según el etiquetado alcanzable, o espacio vacío) y puntuación de confianza.</td></tr>
+    <tr><td>Salida de negocio</td><td>Estado por posición</td><td>Variable categórica con tres valores: correcto, faltante y mal ubicado.</td></tr>
+    <tr><td>Salida de negocio</td><td>Alerta de resurtido</td><td>Lista de posiciones en estado faltante, con su ubicación en el anaquel, para que el personal de tienda las atienda.</td></tr>
+  </tbody>
+</table>
+
+<figure id="f2">
+<svg viewBox="0 0 660 150" width="620" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="fl2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b3b8c"/>
+    </marker>
+  </defs>
+  <rect x="5" y="30" width="120" height="60" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="65" y="56" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">Imagen del</text>
+  <text x="65" y="72" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">anaquel</text>
+  <rect x="165" y="30" width="140" height="60" rx="6" fill="#0b3b8c"/>
+  <text x="235" y="56" fill="#fff" font-size="12" text-anchor="middle" font-weight="600">Detector de</text>
+  <text x="235" y="72" fill="#fff" font-size="12" text-anchor="middle" font-weight="600">objetos</text>
+  <rect x="345" y="30" width="150" height="60" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="420" y="56" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">Conciliación con la</text>
+  <text x="420" y="72" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">referencia</text>
+  <rect x="535" y="30" width="120" height="60" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="595" y="56" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">Estado por posición</text>
+  <text x="595" y="72" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">y alertas</text>
+  <line x1="125" y1="60" x2="163" y2="60" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl2)"/>
+  <line x1="305" y1="60" x2="343" y2="60" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl2)"/>
+  <line x1="495" y1="60" x2="533" y2="60" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl2)"/>
+  <text x="235" y="110" fill="#5a5a5a" font-size="10.5" text-anchor="middle">cajas, clase y confianza</text>
+  <text x="420" y="110" fill="#5a5a5a" font-size="10.5" text-anchor="middle">planograma o distribución</text>
+  <text x="420" y="124" fill="#5a5a5a" font-size="10.5" text-anchor="middle">esperada</text>
+  <text x="595" y="110" fill="#5a5a5a" font-size="10.5" text-anchor="middle">correcto / faltante /</text>
+  <text x="595" y="124" fill="#5a5a5a" font-size="10.5" text-anchor="middle">mal ubicado</text>
+</svg>
+<figcaption><b>Figura 2.</b> Flujo propuesto de la solución. El detector localiza productos y espacios vacíos; la conciliación asigna cada detección a una posición del anaquel y la compara con la distribución esperada para obtener el estado de cada posición y las alertas de resurtido. Elaboración propia.</figcaption>
+</figure>
+
+<!-- ===================== 4. CONVENIOS ===================== -->
+<h2 id="s4">4. Convenios</h2>
+<p>El acceso a los datos está formalizado mediante un <strong>convenio de confidencialidad (NDA)</strong> proporcionado por Bnext y firmado por los tres integrantes del equipo: Jesús Soto Medrano, Germán Eduardo Rodríguez Vázquez y Oscar Alberto Ramírez Anaya. Con la firma del convenio, Bnext habilitó el acceso al servidor en Azure mediante VPN.</p>
+
+<div class="nota">
+  <p class="titulo-nota">Nota sobre el anexo</p>
+  <p>El convenio no se adjunta a este documento porque su contenido es confidencial y está sujeto a los términos del propio acuerdo. El sponsor del proyecto, Dr. Juan Arturo Nolazco Flores, y el asesor, Dr. Raúl Valente Ramírez, tienen conocimiento de su firma y de sus términos.</p>
+</div>
+
+<p>En cumplimiento del convenio, el equipo adopta las siguientes reglas de manejo de la información:</p>
+<ul>
+  <li>Las imágenes y cualquier material de Bnext permanecen en el entorno provisto por la empresa y no se copian a equipos o servicios externos no autorizados.</li>
+  <li>Ninguna imagen, planograma o identificador comercial de Bnext o de sus clientes se incorpora a repositorios públicos ni a los entregables sin autorización expresa.</li>
+  <li>Los resultados se reportan de forma agregada o sobre ejemplos autorizados por Bnext.</li>
+  <li>Las credenciales de acceso son personales y no se comparten ni se registran en el código.</li>
+</ul>
+
+<!-- ===================== BIBLIOGRAFIA ===================== -->
+<h2 id="s5">Bibliografía</h2>
+<div class="biblio">
+<p>Badillo, L. O. (2021, 26 de agosto). <em>El Tec presenta Hub de Ciencia de Datos</em>. TecScience, Tecnológico de Monterrey. https://tecscience.tec.mx/es/tecnologia/hub-de-ciencia-de-datos/</p>
+<p>Bnext. (s. f.). <em>Bnext</em> [Sitio web]. Recuperado el 27 de septiembre de 2026, de https://bnext.mx</p>
+<p>Goldman, E., Herzig, R., Eisenschtat, A., Goldberger, J., &amp; Hassner, T. (2019). Precise detection in densely packed scenes. En <em>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition</em> (pp. 5222–5231). IEEE. https://doi.org/10.1109/CVPR.2019.00537</p>
+<p>Gruen, T. W., Corsten, D. S., &amp; Bharadwaj, S. (2002). <em>Retail out-of-stocks: A worldwide examination of extent, causes and consumer responses</em>. Grocery Manufacturers of America.</p>
+<p>Hernández-Sampieri, R., &amp; Mendoza, C. (2023). <em>Metodología de la investigación. Las rutas de la investigación cuantitativa, cualitativa y mixta</em> (2.ª ed.). McGraw-Hill.</p>
+<p>Instituto Nacional de Estadística y Geografía. (2023). <em>Sistema de Clasificación Industrial de América del Norte, México SCIAN 2023</em>. INEGI. https://www.inegi.org.mx/app/scian/</p>
+<p>Omnitech. (s. f.). <em>Bnext</em>. Recuperado el 27 de septiembre de 2026, de https://omnitech.mx/bnext/</p>
+<p>Redmon, J., Divvala, S., Girshick, R., &amp; Farhadi, A. (2016). You only look once: Unified, real-time object detection. En <em>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition</em> (pp. 779–788). IEEE. https://doi.org/10.1109/CVPR.2016.91</p>
+<p>Ren, S., He, K., Girshick, R., &amp; Sun, J. (2015). Faster R-CNN: Towards real-time object detection with region proposal networks. En <em>Advances in Neural Information Processing Systems 28</em> (pp. 91–99). Curran Associates.</p>
+<p>Santra, B., &amp; Mukherjee, D. P. (2019). A comprehensive survey on computer vision based approaches for automatic identification of products in retail store. <em>Image and Vision Computing, 86</em>, 45–63. https://doi.org/10.1016/j.imavis.2019.03.005</p>
+<p>Studer, S., Bui, T. B., Drescher, C., Hanuschkin, A., Winkler, L., Peters, S., &amp; Müller, K.-R. (2021). Towards CRISP-ML(Q): A machine learning process model with quality assurance methodology. <em>Machine Learning and Knowledge Extraction, 3</em>(2), 392–413. https://doi.org/10.3390/make3020020</p>
+<p>Visengeriyeva, L., Kammer, A., Bär, I., Kniesz, A., &amp; Plöd, M. (2023). <em>CRISP-ML(Q). The ML lifecycle process</em>. MLOps, INNOQ. https://ml-ops.org/content/crisp-ml</p>
+</div>
+
+</body>
+</html>
