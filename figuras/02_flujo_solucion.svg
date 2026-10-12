@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg style="background:#ffffff" viewBox="0 0 660 150" width="620" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="fl2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b3b8c"/>
+    </marker>
+  </defs>
+  <rect x="5" y="30" width="120" height="60" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="65" y="56" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">Imagen del</text>
+  <text x="65" y="72" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">anaquel</text>
+  <rect x="165" y="30" width="140" height="60" rx="6" fill="#0b3b8c"/>
+  <text x="235" y="56" fill="#fff" font-size="12" text-anchor="middle" font-weight="600">Detector de</text>
+  <text x="235" y="72" fill="#fff" font-size="12" text-anchor="middle" font-weight="600">objetos</text>
+  <rect x="345" y="30" width="150" height="60" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="420" y="56" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">Conciliación con la</text>
+  <text x="420" y="72" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">referencia</text>
+  <rect x="535" y="30" width="120" height="60" rx="6" fill="#e8eef9" stroke="#0b3b8c"/>
+  <text x="595" y="56" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">Estado por posición</text>
+  <text x="595" y="72" fill="#0b3b8c" font-size="12" text-anchor="middle" font-weight="600">y alertas</text>
+  <line x1="125" y1="60" x2="163" y2="60" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl2)"/>
+  <line x1="305" y1="60" x2="343" y2="60" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl2)"/>
+  <line x1="495" y1="60" x2="533" y2="60" stroke="#0b3b8c" stroke-width="1.6" marker-end="url(#fl2)"/>
+  <text x="235" y="110" fill="#5a5a5a" font-size="10.5" text-anchor="middle">cajas, clase y confianza</text>
+  <text x="420" y="110" fill="#5a5a5a" font-size="10.5" text-anchor="middle">planograma o distribución</text>
+  <text x="420" y="124" fill="#5a5a5a" font-size="10.5" text-anchor="middle">esperada</text>
+  <text x="595" y="110" fill="#5a5a5a" font-size="10.5" text-anchor="middle">correcto / faltante /</text>
+  <text x="595" y="124" fill="#5a5a5a" font-size="10.5" text-anchor="middle">mal ubicado</text>
+</svg>
